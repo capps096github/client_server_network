@@ -1,0 +1,69 @@
+
+// A server manages many clients and the clients can create groups and subscribe to the groups.
+// There is a special client among all clients, used to create groups on the server.
+// Other clients then subscribe to the groups of interest. 
+// After subscribing, clients will start receiving messages from that group.
+// These messages are send after a predefined time period as per the configurations made by the super client during group creation
+
+Question Breakdown:
+1. A server manages many clients
+2. Clients can create groups and subscribe to the groups
+3. There is a special client among all clients, used to create groups on the server
+4. Other clients then subscribe to the groups of interest
+5. After subscribing, clients will start receiving messages from that group
+6. These messages are send after a predefined time period as per the configurations made by the super client during group creation
+
+ // Other clients then subscribe to the groups of interest.
+  // After subscribing, clients will start receiving messages from that group.
+  // These messages are send after a predefined time period as per the
+  // configurations made by the super client during group creation
+  // These messages are send after a predefined time period as per the configurations made by the super client during group creation
+
+Group Chat:
+1. Start the server
+3. Start the special client
+4. The special client creates groups on the server
+2. Start the client thread
+5.Start the other clients
+6. The other clients subscribe to the groups of interest
+7. The other clients start receiving messages from that group
+
+Group:
+1. A group is created on the server
+2. Has a list of clients who are subscribed to the group
+3. Has a list of messages sent to the group
+4. Has a list of messages received from the group
+5. Has a name
+6. Has a port number
+
+Server:
+1. Has a list of groups
+2. Has a list of clients
+3. Has a list of messages
+4. Has a method to create groups
+5. Has a method to update the list of groups
+
+Client:
+2. Has a method to subscribe to groups
+3. Has a method to send messages to groups
+4. Has a method to receive messages from groups
+
+Through the classes in java.net, Java programs can use TCP or UDP to communicate over the Internet. The URL, URLConnection, Socket, and ServerSocket classes 
+all use TCP to communicate over the network. 
+The DatagramPacket, DatagramSocket, and MulticastSocket classes are for use with UDP.
+
+https://docs.oracle.com/javase/tutorial/networking/overview/networking.html
+
+We use UDP to let the clients receive packets basing on their
+IP address and port number.
+
+This link
+Example of something we want
+ https://www.tutorialspoint.com/java/java_networking.htm
+
+Groups are created by creating a new connection at a diffrent port number.
+messages are then sent to the group at that port number, thats the approach we shall use
+
+
+we start a client
+start the super client to show a list of groups to join 
