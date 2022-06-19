@@ -15,11 +15,13 @@ public class SpecialClient {
 
     // create a group and send a message to it
     init();
+
   }
 
   // init method, that shows a menu to the user to ask them whether they want to
   // create a group or send a message
   public static void init() throws IOException {
+
     // print the menu
     System.out.println("\n +--------------------- Welcome to the Cephas Chat! ------------------------+\n");
     System.out.println("\n+----> Connected as: SPECIAL CLIENT\n");
@@ -30,7 +32,6 @@ public class SpecialClient {
 
     // print
     System.out.println("\n> Choose an option: ");
-    // variable to store the user input
 
     // variable to store the user input
     int choice = scanner.nextInt();
